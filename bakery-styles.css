@@ -1,24 +1,30 @@
 @charset "UTF-8";
 
+
+html, body{
+  height: 100%;
+}
+
 body {
- 
   font-family: Georgia, serif;
   font-size: 100%;
   background-color: white;
   margin: 0;
-  height: 150px;
 }
+
 #container{
   display: grid;
-  grid-template-columns: auto 16em;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 16em;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
 }
 
 /* header styles */
 header {
   grid-column: 1/-1;
   background:  url(images/croissants_banner.jpg) no-repeat center center;
-  background-size: cover; 
+  background-size: cover;
+  height: 20em; 
 }
 
 header p {
@@ -26,11 +32,10 @@ header p {
   font-size: 1.2em;
   text-align: center;
   color: #fff;
-  padding-bottom: 5%;
 }
 
 header h1 {
-  margin-top: 1.5em;
+  padding-top: 1.5em;
   text-align: center;
 }
 
@@ -38,26 +43,24 @@ header h1 {
 nav, footer {
   font-family: verdana, sans-serif;
   background-color: #783F27;
-  margin: auto;
-  padding: 1em; 
+  padding: 0.8em;
+  height: 1em; 
 }
 
 nav {
+  font-size: 1.5em;
   display: flex; /* Usar flexbox para el contenedor nav */
   justify-content: center; /* Centrar los elementos*/
-  justify-content: space-around;
+  align-items: center;
 }
 
 ul{
-  margin: 0;
-  padding: 0;
   list-style-type: none;
   display: flex; /* Cambiar a flex para alinear horizontalmente */
-  
 }
 
 nav ul li {
-  margin-inline: 1em; /* Espacio entre los elementos */
+  margin-inline: 0.5em; /* Espacio entre los elementos */
 }
 
 nav ul li a:link, nav ul li a:visited {
@@ -94,7 +97,6 @@ main h3{
   border-left: 5px solid;
   padding-left: 1em;
 }
-
 
 p.more {
   font-family: verdana, sans-serif;
@@ -139,17 +141,16 @@ aside {
 footer {
   grid-column: 1/-1;
   color: #EADDC4;
+  min-height: 2em;
 }
 footer p{
-  text-align: center;
-  padding-top: 2em;
-  font-size: 1em;
+  text-align:center;
 }
 
 footer img {
   position: fixed; 
   top: 3em;
-  left: 6em;
+  left: 5em;
 }
 
 h2 {
